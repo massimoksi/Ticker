@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56B2BF3E1C52E9F600D01DD9 /* Ticker.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B2BF3D1C52E9F600D01DD9 /* Ticker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56D7BE571C52EAE200BC2778 /* Ticker.h in Headers */ = {isa = PBXBuildFile; fileRef = 56D7BE551C52EAE200BC2778 /* Ticker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56B2BF3A1C52E9F600D01DD9 /* Ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56B2BF3D1C52E9F600D01DD9 /* Ticker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticker.h; sourceTree = "<group>"; };
-		56B2BF3F1C52E9F600D01DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56D7BE541C52EAE200BC2778 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56D7BE551C52EAE200BC2778 /* Ticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +30,7 @@
 		56B2BF301C52E9F600D01DD9 = {
 			isa = PBXGroup;
 			children = (
-				56B2BF3C1C52E9F600D01DD9 /* Ticker */,
+				56D7BE531C52EAE200BC2778 /* Source */,
 				56B2BF3B1C52E9F600D01DD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +43,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56B2BF3C1C52E9F600D01DD9 /* Ticker */ = {
+		56D7BE531C52EAE200BC2778 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				56B2BF3D1C52E9F600D01DD9 /* Ticker.h */,
-				56B2BF3F1C52E9F600D01DD9 /* Info.plist */,
+				56D7BE551C52EAE200BC2778 /* Ticker.h */,
+				56D7BE541C52EAE200BC2778 /* Info.plist */,
 			);
-			path = Ticker;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +59,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B2BF3E1C52E9F600D01DD9 /* Ticker.h in Headers */,
+				56D7BE571C52EAE200BC2778 /* Ticker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,8 +232,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Ticker/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.massimoperi.Ticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -248,8 +249,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Ticker/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.massimoperi.Ticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +278,7 @@
 				56B2BF441C52E9F600D01DD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
