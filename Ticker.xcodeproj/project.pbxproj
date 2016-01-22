@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		56D7BE571C52EAE200BC2778 /* Ticker.h in Headers */ = {isa = PBXBuildFile; fileRef = 56D7BE551C52EAE200BC2778 /* Ticker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56D7BE591C52EC4D00BC2778 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7BE581C52EC4D00BC2778 /* Ticker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56B2BF3A1C52E9F600D01DD9 /* Ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D7BE541C52EAE200BC2778 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D7BE551C52EAE200BC2778 /* Ticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticker.h; sourceTree = "<group>"; };
+		56D7BE581C52EC4D00BC2778 /* Ticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				56D7BE551C52EAE200BC2778 /* Ticker.h */,
+				56D7BE581C52EC4D00BC2778 /* Ticker.swift */,
 				56D7BE541C52EAE200BC2778 /* Info.plist */,
 			);
 			path = Source;
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D7BE591C52EC4D00BC2778 /* Ticker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +232,7 @@
 		56B2BF431C52E9F600D01DD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -239,12 +244,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.massimoperi.Ticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		56B2BF441C52E9F600D01DD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
