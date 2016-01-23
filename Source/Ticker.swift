@@ -86,7 +86,7 @@ public enum LogLevelStyle {
     case Verbose
     case Symbolic
     case Funny
-    case Casual(Bool)
+    case Casual(urban: Bool)
 
     func description(level: LogLevel) -> String {
         switch self {
