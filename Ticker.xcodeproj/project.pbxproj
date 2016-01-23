@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56D531D61C541B7A005C7FC9 /* TickerLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D531D51C541B7A005C7FC9 /* TickerLogger.swift */; };
 		56D7BE571C52EAE200BC2778 /* Ticker.h in Headers */ = {isa = PBXBuildFile; fileRef = 56D7BE551C52EAE200BC2778 /* Ticker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56D7BE591C52EC4D00BC2778 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7BE581C52EC4D00BC2778 /* Ticker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56B2BF3A1C52E9F600D01DD9 /* Ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D531D51C541B7A005C7FC9 /* TickerLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerLogger.swift; sourceTree = "<group>"; };
 		56D7BE541C52EAE200BC2778 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D7BE551C52EAE200BC2778 /* Ticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticker.h; sourceTree = "<group>"; };
 		56D7BE581C52EC4D00BC2778 /* Ticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				56D7BE551C52EAE200BC2778 /* Ticker.h */,
 				56D7BE581C52EC4D00BC2778 /* Ticker.swift */,
+				56D531D51C541B7A005C7FC9 /* TickerLogger.swift */,
 				56D7BE541C52EAE200BC2778 /* Info.plist */,
 			);
 			path = Source;
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D7BE591C52EC4D00BC2778 /* Ticker.swift in Sources */,
+				56D531D61C541B7A005C7FC9 /* TickerLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

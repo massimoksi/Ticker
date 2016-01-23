@@ -20,13 +20,13 @@
 
 import Foundation
 
-private var logger: TickerLogger?
+var logger: TickerLogger?
 
-private var minimumLogLevel = LogLevel.Debug
+var minimumLogLevel = LogLevel.Debug
 
 // MARK: Setup
 
-public func setup(level: LogLevel = .Debug, style: LogLevelStyle = .Funny, showTimestamp: Bool = true) {
+public func setup(level: LogLevel = .Info, style: LogLevelStyle = .Funny, showTimestamp: Bool = true) {
     logger = TickerLogger(levelStyle: style, showTimestamp: showTimestamp)
     minimumLogLevel = level
 }
@@ -39,9 +39,7 @@ public func setup(level: LogLevel = .Debug, style: LogLevelStyle = .Funny, showT
     - parameter message: The info message to be logged.
 */
 public func info(message: String) {
-    if minimumLogLevel.hashValue >= LogLevel.Info.hashValue {
-        logger?.log(message, level: .Info)
-    }
+    logger?.log(message, level: .Info)
 }
 
 /**
@@ -50,9 +48,7 @@ public func info(message: String) {
     - parameter message: The debug message to be logged.
 */
 public func debug(message: String) {
-    if minimumLogLevel.hashValue >= LogLevel.Debug.hashValue {
-        logger?.log(message, level: .Debug)
-    }
+    logger?.log(message, level: .Debug)
 }
 
 /**
@@ -61,9 +57,7 @@ public func debug(message: String) {
     - parameter message: The warning message to be logged.
 */
 public func warning(message: String) {
-    if minimumLogLevel.hashValue >= LogLevel.Warning.hashValue {
-        logger?.log(message, level: .Warning)
-    }
+    logger?.log(message, level: .Warning)
 }
 
 /**
@@ -72,9 +66,7 @@ public func warning(message: String) {
     - parameter message: The error message to be logged.
 */
 public func error(message: String) {
-    if minimumLogLevel.hashValue >= LogLevel.Error.hashValue {
-        logger?.log(message, level: .Error)
-    }
+    logger?.log(message, level: .Error)
 }
 
 /**
@@ -83,38 +75,7 @@ public func error(message: String) {
     - parameter message: The severe error message to be logged.
 */
 public func failure(message: String) {
-    if minimumLogLevel.hashValue >= LogLevel.Failure.hashValue {
-        logger?.log(message, level: .Failure)
-    }
-}
-
-// MARK: - TickerLogger
-
-private class TickerLogger {
-
-    private var style: LogLevelStyle
-
-    private var showTimestamp: Bool
-
-    private lazy var dateFormatter: NSDateFormatter = {
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale.currentLocale()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
-
-        return formatter
-    }()
-
-    init(levelStyle: LogLevelStyle, showTimestamp: Bool) {
-        self.style = levelStyle
-        self.showTimestamp = showTimestamp
-    }
-
-    private func log(message: String, level: LogLevel) {
-        let date = showTimestamp ? "\(dateFormatter.stringFromDate(NSDate())) - " : ""
-
-        print("\(date)\(style.description(level))\(message)")
-    }
-
+    logger?.log(message, level: .Failure)
 }
 
 // MARK: - LogLevelStyle
@@ -127,7 +88,7 @@ public enum LogLevelStyle {
     case Funny
     case Casual(Bool)
 
-    private func description(level: LogLevel) -> String {
+    func description(level: LogLevel) -> String {
         switch self {
         case .Hidden:
             return ""
