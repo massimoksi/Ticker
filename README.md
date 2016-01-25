@@ -90,7 +90,7 @@ Ticker.setup(.Debug, style: .Verbose, showTimestamp: false)
 
 Ticker implements the following styles to visualize the log level.
 
-- `.Hidden`: the log level is not output.
+- `.Hidden`: the log level name is not output.
 
 - `.Verbose`: the whole log level name is printed.
 
