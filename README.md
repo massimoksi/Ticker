@@ -2,11 +2,11 @@
 
 Ticker is a simple and funny - yet expressive and configurable - logging library for iOS.
 
-The aim of Ticker is to act as a more expressive replacement for Swift `print` statements during the development of your a project.
+The aim of Ticker is to act as a more expressive replacement for Swift `print` statements during the development of your project.
 
 ## Description
 
-Implementation is inspired by other full-fledged logging libraries for Swift, but it's not yet inteded as a replacement to those frameworks due to the lack of some power functions.
+Implementation is inspired by other full-fledged logging libraries for Swift, but it's not yet inteded as a replacement for those frameworks due to the lack of some power functions.
 
 Its functions are - *at the moment* - limited to logging on console in the main thread but the output is **funny by default&trade;**.
 
