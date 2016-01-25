@@ -57,10 +57,11 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 Then you're ready to start logging on console calling the available logging functions:
 
 ```swift
+Ticker.info("This is an info message")
 Ticker.debug("This is a debug message")
 Ticker.warning("This is a warning message")
 Ticker.error("This is an error message")
-Ticker.severe("This is a severe error message")
+Ticker.failure("This is a failure message")
 ```
 
 The generated output will be:
