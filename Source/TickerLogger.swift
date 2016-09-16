@@ -22,7 +22,7 @@ import Foundation
 
 // MARK: - TickerLogger
 
-class TickerLogger {
+final class TickerLogger {
 
     var style: LogLevelStyle
 
