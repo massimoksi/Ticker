@@ -24,9 +24,9 @@ import Foundation
 
 final class TickerLogger {
 
-    var style: LogLevelStyle
+    private var style: LogLevelStyle
 
-    var showTimestamp: Bool
+    private var showTimestamp: Bool
 
     private lazy var dateFormatter: NSDateFormatter = {
         let formatter = NSDateFormatter()
